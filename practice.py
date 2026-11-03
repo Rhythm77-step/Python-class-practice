@@ -19,7 +19,7 @@ else:
         #off peak hours behaviour
         action="Normal GREEN light duration"
 print(f"Traffic light Action: {action}")
-"""
+
 #Smart Airline system with capped discount
 #Taking inputs 
 age=int(input("Age:"))
@@ -45,6 +45,9 @@ if discount> base_price:
 final_ticket_price=base_price +booking_charges-discount
 print(f"Discount Applied:{discount:.1f}")
 print(f"Final ticket price:{final_ticket_price:.1f}")
+"""
+
+
 
 
 
