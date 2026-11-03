@@ -45,7 +45,88 @@ if discount> base_price:
 final_ticket_price=base_price +booking_charges-discount
 print(f"Discount Applied:{discount:.1f}")
 print(f"Final ticket price:{final_ticket_price:.1f}")
+
+#Taxi fare calculation
+#take inputs
+distance=float(input("Enter distance in km:"))
+time_hour=int(input("Enter ride hour(0-23):"))
+#Calculate fare based on distnace slabs
+if distance<=5:
+    fare=distance*20
+elif distance <=15:
+    fare=(5*20)+(distance-5)*15
+     
+#string operation using re module
+import re
+record="STU-66CSE, tripathirhythm247@gmail.com , +1-8305501296, score=90|Grade=A;status=pass"
+#extract student code
+student_code=re.findall(r"STU-\d{2}[A-Z]{3}",record)
+#extract student email
+emails=re.findall(r"[\w.-]+@[\w.-]+\.\w+",record)
+#extract phone number
+phones=re.findall(r"\+\d-\d{10}",record)
+#printing the student details
+print("Student Code:",student_code)
+print("Email:",emails)
+print("Phone:",phones)
+
+#Student assignment and attendance score using nested lists
+
+n=int(input("Enter no of students:"))
+m=int(input("Enter no of courses:"))
+Y=[]
+for i in range(n):
+    student=[]
+    for j in range(m):
+       a,b= map(int,input("Enter assignment and attendance:").split())
+       student.append((a,b))
+
+    Y.append(student)
+
+for i in range(n):
+    scores=[]
+    grades=[]
+    for j in range(m):
+        a,b= Y[a][b]
+        final_score=0.4*a+0.6*b
+        scores.append(final_score)
+
+        if final_score>=90:
+            grade="A"
+        elif final_score>=80:
+            grade="B"
+        elif final_score>=70:
+            grade="C"
+        elif final_score>=60:
+            grade="D"
+        else:
+            grade="F"
+        grades.append(grade)
+print("Student:",i+1, "Final Score:",scores)
+print("Student:",i+1, "Grades:",grades)
 """
+#Matrix transformation using numpy
+import numpy as np
+#creating array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
