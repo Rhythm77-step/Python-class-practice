@@ -104,10 +104,78 @@ for i in range(n):
         grades.append(grade)
 print("Student:",i+1, "Final Score:",scores)
 print("Student:",i+1, "Grades:",grades)
-"""
+
 #Matrix transformation using numpy
 import numpy as np
 #creating array
+T=np.array([[4,1,2],
+          [0,3,1],
+          [2,1,5]])
+#generate random signal matrix
+A=np.random.randint(1,10,(3,3))
+#Apply transformation
+B=np.dot(T ,A)
+#reconstruct original matrix
+A1=np.dot(np.linalg.inv(T),B)
+print("Original Matrix:")
+print(A)
+print("Transformed Matrix:")
+print(B)
+print("Reconstructed Matrix:")
+print(np.round(A1,2))
+#check reconstruction
+print("Reconstruction Correct:",np.allclose(A,A1))
+
+#Extract quantity item pairs using string methods
+order=input("Enter your order:")
+threshold=int(input("Enter discount threshold quantity:"))
+items=order.replace("and",",").split(",")
+discount_items=[]
+for item in items:
+    parts=item.strip().split(" ",1)
+
+    quantity=int(parts[0])
+    name=parts[1].lower()
+
+    if quantity > threshold:
+        discount_items.append(name)
+print("Great news! You got a discount on:", ",".join(discount_items))
+
+#File handling using Python
+with open("attendance.txt","r") as file:
+    lines=file.readlines()
+summary=[]
+max_hours=0
+for line in lines:
+    data=line.strip().split(",")
+    name=data[0] 
+    hours=list(map(int,data[1:]))
+    total=sum(hours)
+    summary.append((name,total))
+    if total>max_hours:
+        max_hours=total
+with open("Summary.txt","w") as file:
+    for name,total in summary:
+        file.write(name+ ","+str(total)+"\n")
+print("Employee(s) with maximum hours",max_hours)
+for name,total in summary:
+    if total==max_hours:
+        print(name)
+"""
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
 
 
 
