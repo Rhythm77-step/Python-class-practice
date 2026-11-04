@@ -179,8 +179,8 @@ difference=abs(number-17)
 if difference > 17:
     difference=difference*2
 print("Result:",difference)
-
 """
+
 
 
 
