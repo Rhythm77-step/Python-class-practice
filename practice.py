@@ -179,7 +179,87 @@ difference=abs(number-17)
 if difference > 17:
     difference=difference*2
 print("Result:",difference)
+
+#calculate the sum of three numbers
+#taking three numbers in input
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+#calculating sum of three numbers
+total=a+b+c
+#using conditionals
+if a==b==c:
+    total=total*3
+print("Result:",total)
+
+#find the factorial of a number
+#taking the input from the user
+num=int(input("Enter the number:"))
+#checking whether thr number is negative or not
+if num<0:
+    print("Factorial is not defined for negative number")
+else:
+
+    factorial=1
+    for i in range(1,num+1):
+        factorial=factorial*i
+print("Factorial=",factorial)  
+
+
+
+#Find the maximum of three numbers
+#taking three numbers in input
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+#using conditionals
+if a>=b and a>=c:
+    maximum=a
+elif b>=a and b>=c:
+    maximum=b
+
+else:
+    maximum=c
+print("The maximum of three numbers is:",maximum)
 """
+#Check whether a year is a leap year
+#taking the year in input
+year=int(input("Enter the year:"))
+#using conditionals
+if (year % 400==0) or (year % 4==0 and year % 100!=0):
+    print(year,"is a leap year")
+else:
+    print(year,"is not a leap year")
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
 
 
 
