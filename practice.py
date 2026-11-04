@@ -161,7 +161,48 @@ print("Employee(s) with maximum hours",max_hours)
 for name,total in summary:
     if total==max_hours:
         print(name)
+
+#check whether a number is even or odd
+num=int(input("Enter the number:"))
+#using conditionals
+if num % 2 ==0:
+    print("Number eneterd is even")
+else:
+    print("Number eneterd is odd")
+
+#Find the Difference between a given number and 17
+#taking input from the user
+number=int(input("Enter the number:"))
+#Calculating absolute value of difference
+difference=abs(number-17)
+#using conditionals
+if difference > 17:
+    difference=difference*2
+print("Result:",difference)
+
 """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
